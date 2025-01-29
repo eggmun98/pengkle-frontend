@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col items-center mt-20 gap-20">
+    <nav className="flex flex-col items-center mt-20 gap-20 p-4">
       <Link href="/" className="hover:opacity-50 transition-opacity cursor-pointer">
         <Home />
       </Link>
@@ -22,7 +22,7 @@ const Sidebar = () => {
       <Link href="/settings" className="hover:opacity-50 transition-opacity cursor-pointer">
         <Setting />
       </Link>
-    </div>
+    </nav>
   );
 };
 
