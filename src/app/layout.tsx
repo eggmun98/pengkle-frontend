@@ -26,13 +26,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body>
         <div className="flex flex-col h-screen">
           <Header />
-          <div className="flex flex-row h-full">
+          <div className="flex">
             <Sidebar />
-            {children}
+            <main className="flex-1 flex  flex-col items-center  justify-center  ">
+              <div className="max-w-2xl w-full h-full bg-white rounded-t-3xl  scrollbar-hide overflow-y-auto h-[calc(100vh-76px)]">
+                {children}
+              </div>
+            </main>
           </div>
         </div>
       </body>
