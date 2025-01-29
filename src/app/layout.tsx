@@ -1,3 +1,5 @@
+import Header from '@/_components/layouts/Header/Header';
+import Sidebar from '@/_components/layouts/Sidebar/Sidebar';
 import { Metadata } from 'next';
 import './globals.css';
 
@@ -25,7 +27,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="flex flex-col h-screen">
+          <Header />
+          <div className="flex flex-row h-full">
+            <Sidebar />
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
